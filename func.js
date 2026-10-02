@@ -52,14 +52,86 @@ const no=function(a){
 }
 no(-89)
 // find the factorial of the given number
+const fact = function(a) {
+    var result = 1;
+
+    while (a != 0) {
+        result = result * a;
+        a--;
+    }
+
+    console.log(result);
+}
+
+fact(4);
+
 
 //to print the reverse number input=234
+const rev= function(a){
+    var reve = 0;
+    while(a>=0){
+        var digit = a%10
+        let digit = num % 10;
+        rev = rev * 10 + digit;
+        a = Math.floor(a/10);
+    }
+    console.log(rev);
+}
+
 // palindrome
+const palin= function(a){
+    var rev = 0;
+    var temp = a;
+    while(a>0){
+        var digit = a%10;
+        rev = rev * 10 + digit;
+        a = Math.floor(a/10);
+    }
+    if(rev == temp){
+        console.log("The number is a palindrome");
+    }
+    else{
+        console.log("The number is not a palindrome");
+    }
+}
 // Armstrong number
+const armstrong= function(a){
+    var sum = 0;
+    var temp = a;   
+    while(a>0){
+        var digit = a%10;
+        sum += digit*digit*digit;
+        a = Math.floor(a/10);
+    }
+    if(sum == temp){
+        console.log("The number is an Armstrong number");
+    }
+    else{
+        console.log("The number is not an Armstrong number");
+    }
+}
 
 
 //input : 123
 //output:6
+const sumOfDigits = function(a){
+    var sum = 0;
+    while(a>0){
+        var digit = a%10;
+        sum += digit;
+        a = Math.floor(a/10);
+    }
+    console.log(sum);
+}
 
 //input:423
 //output:24
+const productOfDigits = function(a){
+    var product = 1;  
+    while(a>0){
+        var digit = a%10;
+        product *= digit;
+        a = Math.floor(a/10);
+    }
+    console.log(product);
+}
