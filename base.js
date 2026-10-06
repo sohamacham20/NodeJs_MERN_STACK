@@ -23,8 +23,20 @@ http.createServer(function(req,res){
     //     console.log('File created Successfully')
     // })
 
-    fs.readFile('myfile1.txt',function(err,data){
-        res.write(data)
+    // fs.readFile('myfile1.txt',function(err,data){
+    //     res.write(data)
+    //     return res.end();
+    // })
+
+    fs.writeFile('myfile.1.txt',"\nNew updated content is here \n",function(err){
+        if(err) throw err;
+        res.write('file updated sucessfully and without any error no neeed to worry');
+        return res.end();
+    })
+    d='\nThis is the newly added data '
+    fs.appendFile('myfile1.txt',d,function(err){
+        if (err) throw err;
+        res.write("final updattion of the file")
         return res.end();
     })
 }).listen(1000);
