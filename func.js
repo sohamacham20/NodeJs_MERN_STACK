@@ -66,24 +66,31 @@ const fact = function(a) {
 fact(4);
 
 
-//to print the reverse number input=234
-const rev= function(a){
-    var reve = 0;
-    while(a>=0){
-        var digit = a%10
-        let digit = num % 10;
+
+// To print the reverse number
+// input = 234
+
+const rev = function(a) {
+    var rev = 0;
+
+    while (a > 0) {
+        let digit = a % 10;
+
         rev = rev * 10 + digit;
-        a = Math.floor(a/10);
+        a = Math.floor(a / 10);
     }
+
     console.log(rev);
 }
+
+rev(234);
 
 // palindrome
 const palin= function(a){
     var rev = 0;
     var temp = a;
     while(a>0){
-        var digit = a%10;
+        let digit = a%10;
         rev = rev * 10 + digit;
         a = Math.floor(a/10);
     }
@@ -94,13 +101,14 @@ const palin= function(a){
         console.log("The number is not a palindrome");
     }
 }
+palin(12321);
 // Armstrong number
 const armstrong= function(a){
     var sum = 0;
     var temp = a;   
     while(a>0){
         var digit = a%10;
-        sum += digit*digit*digit;
+        sum = sum + (digit*digit*digit);
         a = Math.floor(a/10);
     }
     if(sum == temp){
@@ -110,6 +118,7 @@ const armstrong= function(a){
         console.log("The number is not an Armstrong number");
     }
 }
+armstrong(153);
 
 
 //input : 123
@@ -123,6 +132,8 @@ const sumOfDigits = function(a){
     }
     console.log(sum);
 }
+sumOfDigits(123);
+
 
 //input:423
 //output:24
@@ -135,3 +146,4 @@ const productOfDigits = function(a){
     }
     console.log(product);
 }
+productOfDigits(423);
