@@ -28,15 +28,23 @@ http.createServer(function(req,res){
     //     return res.end();
     // })
 
-    fs.writeFile('myfile.1.txt',"\nNew updated content is here \n",function(err){
-        if(err) throw err;
-        res.write('file updated sucessfully and without any error no neeed to worry');
-        return res.end();
-    })
-    d='\nThis is the newly added data '
-    fs.appendFile('myfile1.txt',d,function(err){
+    // fs.writeFile('myfile.1.txt',"\nNew updated content is here \n",function(err){
+    //     if(err) throw err;
+    //     res.write('file updated sucessfully and without any error no neeed to worry');
+    //     return res.end();
+    // })
+    // d='\nThis is the newly added data '
+    // fs.appendFile('myfile1.txt',d,function(err){
+    //     if (err) throw err;
+    //     res.write("final updattion of the file")
+    //     return res.end();
+    // })
+
+    fs.rename('myfile.1.txt','myfile2.txt',function(err){
         if (err) throw err;
-        res.write("final updattion of the file")
+        console.log("Renaminng is sucessfully");
         return res.end();
     })
+
+    fs.unlink()
 }).listen(1000);
