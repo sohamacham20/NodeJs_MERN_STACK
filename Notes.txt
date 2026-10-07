@@ -1,4 +1,0 @@
-There are three types of modules available :
-1] Core modules-> http, 
-2] Local modules-> cretaed by the user eg. server.js
-3] third party modules -. node package manager(npm)This ia node programThis ia node programThis ia node programThis ia node programThis ia node program
