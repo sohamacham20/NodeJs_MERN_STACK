@@ -17,16 +17,16 @@ http.createServer(function(req,res){
     //     console.log('File has been created without any error');
     // })
 
-    // data="Hello My country name is India"
+    data="Hello My country name is India"
     // fs.appendFile('myfile1.txt',data,function(err){
     //     if(err) throw err;
     //     console.log('File created Successfully')
     // })
 
-    // fs.readFile('myfile1.txt',function(err,data){
-    //     res.write(data)
-    //     return res.end();
-    // })
+    fs.readFile('myfile1.txt',(err,data)=>{
+       if (err) throw err;
+       console.log(data.toString());
+    });
 
     // fs.writeFile('myfile.1.txt',"\nNew updated content is here \n",function(err){
     //     if(err) throw err;
@@ -40,11 +40,11 @@ http.createServer(function(req,res){
     //     return res.end();
     // })
 
-    fs.rename('myfile.1.txt','myfile2.txt',function(err){
-        if (err) throw err;
-        console.log("Renaminng is sucessfully");
-        return res.end();
-    })
+    // fs.rename('myfile.1.txt','myfile2.txt',function(err){
+    //     if (err) throw err;
+    //     console.log("Renaminng is sucessfully");
+    //     return res.end();
+    // })
 
-    fs.unlink()
+    // fs.unlink()
 }).listen(1000);
